@@ -42,42 +42,48 @@ namespace ACME_Cars
                         string chose = Console.ReadLine();
                         int index = getIndex(chose);
 
-                        Console.Write("Vad vill du ändra på: ");
-                        string change = Console.ReadLine();
-                        switch (change)
-                        {
-                            case "regnummer":
-                                Console.Write($"Ändra {Cars[index].regNummer} till: ");
-                                Cars[index].regNummer = Console.ReadLine();
-                                break;
-                            case "tillverkare":
-                                Console.Write($"Ändra {Cars[index].maker} till: ");
-                                Cars[index].maker = Console.ReadLine();
-                                break;
-                            case "modell":
-                                Console.Write($"Ändra {Cars[index].model} till: ");
-                                Cars[index].model = Console.ReadLine();
-                                break;
-                            case "color":
-                                Console.Write($"Ändra {Cars[index].color} till: ");
-                                Cars[index].color = Console.ReadLine();
-                                break;
-                            case "allt":
-                                Console.Write($"Ändra {Cars[index].regNummer} till: ");
-                                Cars[index].regNummer = Console.ReadLine();
-                                
-                                Console.Write($"Ändra {Cars[index].maker} till: ");
-                                Cars[index].maker = Console.ReadLine();
-                                
-                                Console.Write($"Ändra {Cars[index].model} till: ");
-                                Cars[index].model = Console.ReadLine();
-                                
-                                Console.Write($"Ändra {Cars[index].color} till: ");
-                                Cars[index].color = Console.ReadLine();
-                                break;
-                            default:
-                                break;
-                        }
+
+                        //while (true)
+                        //{
+
+
+                            Console.Write("Vad vill du ändra på: ");
+                            string change = Console.ReadLine();
+                            switch (change)
+                            {
+                                case "regnummer":
+                                    Console.Write($"Ändra {Cars[index].regNummer} till: ");
+                                    Cars[index].regNummer = Console.ReadLine();
+                                    break;
+                                case "tillverkare":
+                                    Console.Write($"Ändra {Cars[index].maker} till: ");
+                                    Cars[index].maker = Console.ReadLine();
+                                    break;
+                                case "modell":
+                                    Console.Write($"Ändra {Cars[index].model} till: ");
+                                    Cars[index].model = Console.ReadLine();
+                                    break;
+                                case "color":
+                                    Console.Write($"Ändra {Cars[index].color} till: ");
+                                    Cars[index].color = Console.ReadLine();
+                                    break;
+                                case "allt":
+                                    Console.Write($"Ändra {Cars[index].regNummer} till: ");
+                                    Cars[index].regNummer = Console.ReadLine();
+
+                                    Console.Write($"Ändra {Cars[index].maker} till: ");
+                                    Cars[index].maker = Console.ReadLine();
+
+                                    Console.Write($"Ändra {Cars[index].model} till: ");
+                                    Cars[index].model = Console.ReadLine();
+
+                                    Console.Write($"Ändra {Cars[index].color} till: ");
+                                    Cars[index].color = Console.ReadLine();
+                                    break;
+                                default:
+                                    break;
+                            }
+                        //}
                         break;
 
                     case "D":
@@ -92,7 +98,7 @@ namespace ACME_Cars
                     case "S":
                         foreach (var item in Cars)
                         {
-                            Console.WriteLine($"{item.regNummer} \t {item.maker} \t {item.model} \t {item.color}");
+                            Console.WriteLine($"{item.regNummer} \t {item.maker} \t {item.model} \t {item.color}\n");
                         }
 
                         break;
@@ -109,7 +115,7 @@ namespace ACME_Cars
 
             int getIndex(string find)
             {
-                int found = 0;
+                int found = -1;
 
                 for (int i = 0; i < Cars.Count; i++)
                 {
