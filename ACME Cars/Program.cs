@@ -12,7 +12,7 @@ namespace ACME_Cars
             bool loop = true;
             do
             {
-                Console.WriteLine("Välj mellan:\n X\tAvsluta\n N\tLägg till en bil\n E\t Ändra på en bil\n D\tTa bort en bil");
+                Console.WriteLine("Välj mellan:\n X\tAvsluta\n N\tLägg till en bil\n E\t Ändra på en bil\n D\tTa bort en bil\n N\t visa lista på alla bilar");
                 string val = Console.ReadLine();
                 
                 Console.WriteLine();
